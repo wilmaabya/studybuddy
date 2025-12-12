@@ -64,12 +64,12 @@ export default function TutorDashboard() {
 
       await api.put(`/classes/${editing.id}`, payload);
 
-      alert("Gagal di update");
+      alert("Data Berhasil di update");
       loadMyClasses();
       setEditing(null);
     } catch (err) {
       console.log("ERRORNYA:", err.response?.data);
-      alert(err.response?.data?.error || "Datamu sudah di update");
+      alert(err.response?.data?.error || "Data Gagal Di Update");
     }
   };
 
